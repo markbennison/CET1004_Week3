@@ -6,22 +6,24 @@ namespace CET1004_Week3
     {
         static void Main(string[] args)
         {
-            int menuOption = Menus.GetMainMenuOption();
+            int menuOption;
 
-            while (menuOption > 0)
-            {
-                switch (menuOption)
-                {
-                    case 1:
-                        Exercise1();
-                        break;
-                    case 2:
-                        Exercise2();
-                        break;
-                }
-            }
+			do
+			{
+				menuOption = Menus.GetMainMenuOption();
 
-            void Exercise1()
+				switch (menuOption)
+				{
+					case 1:
+						Exercise1();
+						break;
+					case 2:
+						Exercise2();
+						break;
+				}
+			} while (menuOption > 0);
+
+			void Exercise1()
             {
                 Console.WriteLine("Please enter a number between 1 and 20:");
                 int number = Convert.ToInt32(Console.ReadLine());
